@@ -33,7 +33,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             color: var(--dark);
-            padding-bottom: 80px; /* 为底部导航留空间 */
+            padding-bottom: 80px;
         }
 
         /* 动态背景粒子 */
@@ -111,7 +111,6 @@
             font-size: 1rem;
             margin-bottom: 15px;
             transition: all 0.3s;
-            position: relative;
         }
 
         .login-input:focus {
@@ -146,17 +145,11 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
         }
 
         .login-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(108, 92, 231, 0.4);
-        }
-
-        .login-btn:active {
-            transform: translateY(0);
         }
 
         /* ==================== 自定义模态框系统 ==================== */
@@ -286,29 +279,14 @@
             color: white;
         }
 
-        .modal-btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(108, 92, 231, 0.4);
-        }
-
         .modal-btn-secondary {
             background: var(--light);
             color: var(--dark);
         }
 
-        .modal-btn-secondary:hover {
-            background: #b2bec3;
-            transform: translateY(-2px);
-        }
-
         .modal-btn-danger {
             background: linear-gradient(135deg, var(--danger), #ff9f9a);
             color: white;
-        }
-
-        .modal-btn-danger:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 118, 117, 0.4);
         }
 
         .modal-close {
@@ -348,7 +326,7 @@
             animation: fadeIn 0.8s ease;
         }
 
-        /* 顶部 Header - 包含用户信息和退出按钮 */
+        /* 顶部 Header */
         .app-header {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(20px);
@@ -418,7 +396,7 @@
         /* 主内容区 */
         .main-content {
             padding: 20px;
-            padding-bottom: 100px; /* 为底部导航留空间 */
+            padding-bottom: 100px;
         }
 
         .page-header {
@@ -427,37 +405,39 @@
             align-items: center;
             margin-bottom: 25px;
             animation: slideDown 0.5s ease;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .page-title {
             color: white;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             font-weight: bold;
         }
 
         .header-stats {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            padding: 10px 18px;
+            padding: 8px 15px;
             border-radius: 12px;
             color: white;
             border: 1px solid var(--glass-border);
         }
 
         .stat-card h3 {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             opacity: 0.9;
             margin-bottom: 3px;
         }
 
         .stat-card p {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
         }
 
@@ -474,15 +454,10 @@
         .card {
             background: rgba(255, 255, 255, 0.98);
             border-radius: 20px;
-            padding: 25px;
+            padding: 20px;
             margin-bottom: 20px;
             box-shadow: var(--shadow);
             border: 1px solid var(--glass-border);
-            transition: all 0.3s;
-        }
-
-        .card:active {
-            transform: scale(0.99);
         }
 
         .card-header {
@@ -495,7 +470,7 @@
         }
 
         .card-title {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--dark);
             display: flex;
             align-items: center;
@@ -510,8 +485,8 @@
         /* 转盘样式 */
         .wheel-container {
             position: relative;
-            width: 280px;
-            height: 280px;
+            width: 260px;
+            height: 260px;
             margin: 0 auto;
         }
 
@@ -526,7 +501,6 @@
             border-right: 15px solid transparent;
             border-top: 30px solid var(--secondary);
             z-index: 10;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
         }
 
         .wheel-canvas {
@@ -539,27 +513,23 @@
 
         /* 按钮样式 */
         .btn {
-            padding: 12px 25px;
+            padding: 12px 20px;
             border: none;
             border-radius: 50px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            min-height: 44px; /* 触摸友好 */
+            gap: 6px;
+            min-height: 44px;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-        }
-
-        .btn-primary:active {
-            transform: scale(0.95);
         }
 
         .btn-success {
@@ -574,7 +544,7 @@
 
         .btn-group {
             display: flex;
-            gap: 12px;
+            gap: 10px;
             justify-content: center;
             margin-top: 20px;
             flex-wrap: wrap;
@@ -584,29 +554,22 @@
         .tags-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
             margin-top: 15px;
-            max-height: 120px;
+            max-height: 100px;
             overflow-y: auto;
             padding: 8px;
         }
 
         .tag {
             background: linear-gradient(135deg, var(--light), #fff);
-            padding: 6px 14px;
+            padding: 6px 12px;
             border-radius: 18px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             display: flex;
             align-items: center;
             gap: 6px;
-            transition: all 0.3s;
             cursor: pointer;
-        }
-
-        .tag:active {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            transform: scale(0.95);
         }
 
         .tag span {
@@ -614,38 +577,33 @@
             font-weight: bold;
         }
 
-        .tag:active span {
-            color: white;
-        }
-
         /* 打卡日历 */
         .calendar-grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 6px;
+            gap: 4px;
             margin-top: 15px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
         }
 
         .calendar-day {
             aspect-ratio: 1;
             background: var(--light);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
-            transition: all 0.3s;
-            min-height: 44px;
-        }
-
-        .calendar-day:active {
-            transform: scale(0.9);
+            min-height: 40px;
+            padding: 2px;
         }
 
         .calendar-day.today {
             border: 2px solid var(--primary);
-            background: rgba(108, 92, 231, 0.1);
+            background: rgba(108, 92, 231, 0.15);
         }
 
         .calendar-day.checked {
@@ -656,25 +614,26 @@
         .calendar-day.checked::after {
             content: '✓';
             position: absolute;
-            bottom: 3px;
-            right: 3px;
-            font-size: 0.6rem;
+            bottom: 2px;
+            right: 2px;
+            font-size: 0.5rem;
         }
 
         .calendar-day .day-num {
-            font-size: 1rem;
+            font-size: 0.85rem;
             font-weight: bold;
+            line-height: 1;
         }
 
         .calendar-day .day-name {
-            font-size: 0.6rem;
+            font-size: 0.55rem;
             opacity: 0.7;
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
         /* 计时器 */
         .timer-display {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: bold;
             text-align: center;
             font-family: 'Courier New', monospace;
@@ -682,32 +641,27 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin: 20px 0;
-            text-shadow: 0 5px 15px rgba(108, 92, 231, 0.3);
         }
 
         .timer-modes {
             display: flex;
             justify-content: center;
-            gap: 8px;
+            gap: 6px;
             margin-bottom: 15px;
             flex-wrap: wrap;
         }
 
         .timer-mode {
-            padding: 8px 18px;
+            padding: 8px 14px;
             border-radius: 20px;
             background: var(--light);
             cursor: pointer;
             transition: all 0.3s;
             font-weight: bold;
-            font-size: 0.85rem;
-            min-height: 40px;
+            font-size: 0.8rem;
+            min-height: 38px;
             display: flex;
             align-items: center;
-        }
-
-        .timer-mode:active {
-            transform: scale(0.95);
         }
 
         .timer-mode.active {
@@ -723,24 +677,18 @@
             background: var(--light);
             border-radius: 12px;
             margin-bottom: 8px;
-            transition: all 0.3s;
-        }
-
-        .todo-item:active {
-            transform: scale(0.98);
         }
 
         .todo-checkbox {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             border: 2px solid var(--primary);
-            margin-right: 12px;
+            margin-right: 10px;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s;
             flex-shrink: 0;
         }
 
@@ -752,13 +700,12 @@
         .todo-checkbox.checked::after {
             content: '✓';
             color: white;
-            font-weight: bold;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
 
         .todo-text {
             flex: 1;
-            font-size: 1rem;
+            font-size: 0.95rem;
             word-break: break-word;
         }
 
@@ -779,18 +726,18 @@
         .mood-selector {
             display: flex;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             margin: 15px 0;
             flex-wrap: wrap;
         }
 
         .mood-btn {
-            font-size: 2.2rem;
+            font-size: 2rem;
             cursor: pointer;
             transition: all 0.3s;
             opacity: 0.5;
-            min-width: 50px;
-            min-height: 50px;
+            min-width: 45px;
+            min-height: 45px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -804,20 +751,21 @@
         .mood-history {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
-            gap: 6px;
+            gap: 4px;
             margin-top: 15px;
         }
 
         .mood-day {
             aspect-ratio: 1;
             background: var(--light);
-            border-radius: 10px;
+            border-radius: 8px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-size: 1.3rem;
-            min-height: 44px;
+            font-size: 1.2rem;
+            min-height: 40px;
+            padding: 2px;
         }
 
         /* 记账 */
@@ -834,23 +782,23 @@
         .expense-info {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .expense-icon {
-            width: 36px;
-            height: 36px;
+            width: 34px;
+            height: 34px;
             border-radius: 8px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.1rem;
+            font-size: 1rem;
             flex-shrink: 0;
         }
 
         .expense-amount {
             font-weight: bold;
-            font-size: 1.1rem;
+            font-size: 1rem;
             flex-shrink: 0;
         }
 
@@ -866,17 +814,16 @@
         .achievements-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            gap: 10px;
             margin-top: 15px;
         }
 
         .achievement-card {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 18px 12px;
+            padding: 15px 10px;
             border-radius: 15px;
             text-align: center;
-            transition: all 0.3s;
             opacity: 0.5;
         }
 
@@ -886,22 +833,22 @@
         }
 
         .achievement-icon {
-            font-size: 2rem;
-            margin-bottom: 8px;
+            font-size: 1.8rem;
+            margin-bottom: 6px;
         }
 
         .achievement-title {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .achievement-desc {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             opacity: 0.9;
         }
 
-        /* 底部导航栏 - 移动端优化 */
+        /* 底部导航栏 - 可横向滑动 */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -911,11 +858,18 @@
             backdrop-filter: blur(20px);
             border-top: 1px solid var(--glass-border);
             display: flex;
-            justify-content: space-around;
-            padding: 8px 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 8px 10px;
             padding-bottom: max(8px, env(safe-area-inset-bottom));
             z-index: 100;
             box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .bottom-nav::-webkit-scrollbar {
+            display: none;
         }
 
         .nav-item {
@@ -923,22 +877,25 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 8px 12px;
+            padding: 8px 14px;
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.3s;
             color: #636e72;
-            min-width: 60px;
+            min-width: 65px;
+            flex-shrink: 0;
+            margin: 0 3px;
         }
 
         .nav-item i {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 4px;
         }
 
         .nav-item span {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .nav-item:active {
@@ -971,14 +928,8 @@
         }
 
         @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(100px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(100px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         @keyframes fadeIn {
@@ -987,25 +938,13 @@
         }
 
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes shine {
@@ -1118,11 +1057,6 @@
             .main-content {
                 margin-left: 100px;
                 padding: 40px;
-                padding-bottom: 40px;
-            }
-
-            .page-header {
-                margin-bottom: 40px;
             }
 
             .page-title {
@@ -1141,9 +1075,24 @@
             .achievements-grid {
                 grid-template-columns: repeat(4, 1fr);
             }
+
+            .calendar-grid {
+                gap: 10px;
+            }
+
+            .calendar-day {
+                min-height: 60px;
+            }
+
+            .calendar-day .day-num {
+                font-size: 1.2rem;
+            }
+
+            .calendar-day .day-name {
+                font-size: 0.7rem;
+            }
         }
 
-        /* 隐藏桌面端侧边栏在移动端 */
         .sidebar {
             display: none;
         }
@@ -1168,7 +1117,7 @@
 
     <!-- 主应用 -->
     <div class="app-container" id="appContainer">
-        <!-- 顶部 Header (移动端) -->
+        <!-- 顶部 Header -->
         <div class="app-header">
             <div class="header-user">
                 <div class="header-avatar" id="headerAvatar">👤</div>
@@ -1277,7 +1226,7 @@
                         <h2 class="card-title"><i class="fas fa-calendar-check"></i> 考勤打卡</h2>
                     </div>
                     <div style="text-align: center;">
-                        <div class="stat-badge" id="checkinStatus" style="display: inline-block; padding: 10px 25px; border-radius: 25px; background: #eee; margin-bottom: 20px;">
+                        <div id="checkinStatus" style="display: inline-block; padding: 10px 25px; border-radius: 25px; background: #eee; margin-bottom: 20px;">
                             今日未打卡
                         </div>
                         <div class="timer-display" id="clockDisplay">00:00:00</div>
@@ -1364,15 +1313,15 @@
                     <div style="display: flex; justify-content: space-between; margin-bottom: 20px; padding: 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 15px; color: white;">
                         <div style="text-align: center; flex: 1;">
                             <div style="opacity: 0.8; font-size: 0.85rem;">本月收入</div>
-                            <div style="font-size: 1.5rem; font-weight: bold;" id="monthIncome">¥0</div>
+                            <div style="font-size: 1.3rem; font-weight: bold;" id="monthIncome">¥0</div>
                         </div>
                         <div style="text-align: center; flex: 1; border-left: 1px solid rgba(255,255,255,0.3);">
                             <div style="opacity: 0.8; font-size: 0.85rem;">本月支出</div>
-                            <div style="font-size: 1.5rem; font-weight: bold;" id="monthExpense">¥0</div>
+                            <div style="font-size: 1.3rem; font-weight: bold;" id="monthExpense">¥0</div>
                         </div>
                         <div style="text-align: center; flex: 1; border-left: 1px solid rgba(255,255,255,0.3);">
                             <div style="opacity: 0.8; font-size: 0.85rem;">结余</div>
-                            <div style="font-size: 1.5rem; font-weight: bold;" id="monthBalance">¥0</div>
+                            <div style="font-size: 1.3rem; font-weight: bold;" id="monthBalance">¥0</div>
                         </div>
                     </div>
                     <div id="expenseList"></div>
@@ -1398,27 +1347,27 @@
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
                         <div style="padding: 20px; background: linear-gradient(135deg, var(--primary), var(--secondary)); border-radius: 15px; color: white; text-align: center;">
-                            <h3 style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.9;">总打卡天数</h3>
-                            <div style="font-size: 2rem; font-weight: bold;" id="totalCheckins">0</div>
+                            <h3 style="margin-bottom: 10px; font-size: 0.85rem; opacity: 0.9;">总打卡天数</h3>
+                            <div style="font-size: 1.8rem; font-weight: bold;" id="totalCheckins">0</div>
                         </div>
                         <div style="padding: 20px; background: linear-gradient(135deg, var(--success), #55efc4); border-radius: 15px; color: white; text-align: center;">
-                            <h3 style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.9;">专注总时长</h3>
-                            <div style="font-size: 2rem; font-weight: bold;" id="totalFocusTime">0h</div>
+                            <h3 style="margin-bottom: 10px; font-size: 0.85rem; opacity: 0.9;">专注总时长</h3>
+                            <div style="font-size: 1.8rem; font-weight: bold;" id="totalFocusTime">0h</div>
                         </div>
                         <div style="padding: 20px; background: linear-gradient(135deg, var(--warning), #fdcb6e); border-radius: 15px; color: white; text-align: center;">
-                            <h3 style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.9;">完成任务数</h3>
-                            <div style="font-size: 2rem; font-weight: bold;" id="totalTasks">0</div>
+                            <h3 style="margin-bottom: 10px; font-size: 0.85rem; opacity: 0.9;">完成任务数</h3>
+                            <div style="font-size: 1.8rem; font-weight: bold;" id="totalTasks">0</div>
                         </div>
                         <div style="padding: 20px; background: linear-gradient(135deg, var(--danger), #ff9f9a); border-radius: 15px; color: white; text-align: center;">
-                            <h3 style="margin-bottom: 10px; font-size: 0.9rem; opacity: 0.9;">总支出金额</h3>
-                            <div style="font-size: 2rem; font-weight: bold;" id="totalExpense">¥0</div>
+                            <h3 style="margin-bottom: 10px; font-size: 0.85rem; opacity: 0.9;">总支出金额</h3>
+                            <div style="font-size: 1.8rem; font-weight: bold;" id="totalExpense">¥0</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 底部导航栏 (移动端) -->
+        <!-- 底部导航栏 - 8 个功能全部显示 -->
         <div class="bottom-nav">
             <div class="nav-item active" onclick="switchTab('eat')" data-tab="eat">
                 <i class="fas fa-utensils"></i>
@@ -1436,9 +1385,21 @@
                 <i class="fas fa-tasks"></i>
                 <span>待办</span>
             </div>
-            <div class="nav-item" onclick="switchTab('more')" data-tab="more">
-                <i class="fas fa-ellipsis-h"></i>
-                <span>更多</span>
+            <div class="nav-item" onclick="switchTab('mood')" data-tab="mood">
+                <i class="fas fa-smile"></i>
+                <span>心情</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('expense')" data-tab="expense">
+                <i class="fas fa-wallet"></i>
+                <span>记账</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('achievements')" data-tab="achievements">
+                <i class="fas fa-trophy"></i>
+                <span>成就</span>
+            </div>
+            <div class="nav-item" onclick="switchTab('stats')" data-tab="stats">
+                <i class="fas fa-chart-line"></i>
+                <span>统计</span>
             </div>
         </div>
     </div>
@@ -1497,23 +1458,18 @@
 
             function animate() {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                
                 particles.forEach(p => {
                     ctx.beginPath();
                     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
                     ctx.fillStyle = `rgba(255, 255, 255, ${p.opacity})`;
                     ctx.fill();
-
                     p.x += p.speedX;
                     p.y += p.speedY;
-
                     if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
                     if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
                 });
-
                 animationFrame = requestAnimationFrame(animate);
             }
-
             animate();
         }
 
@@ -1568,9 +1524,7 @@
             }
             if (options.confirmClass) {
                 const confirmBtn = document.querySelector('#modalFooter .modal-btn-primary');
-                if (confirmBtn) {
-                    confirmBtn.className = `modal-btn ${options.confirmClass}`;
-                }
+                if (confirmBtn) confirmBtn.className = `modal-btn ${options.confirmClass}`;
             }
 
             overlay.classList.add('active');
@@ -1581,18 +1535,14 @@
             const overlay = document.getElementById('modalOverlay');
             overlay.classList.remove('active');
             document.removeEventListener('keydown', handleModalKeydown);
-            
             if (modalType === 'prompt' && modalCallback) {
                 modalCallback(null);
             }
         }
 
         function handleModalKeydown(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            } else if (e.key === 'Enter' && modalType !== 'confirm') {
-                handleModalConfirm();
-            }
+            if (e.key === 'Escape') closeModal();
+            else if (e.key === 'Enter' && modalType !== 'confirm') handleModalConfirm();
         }
 
         function handleModalConfirm() {
@@ -1600,30 +1550,19 @@
                 const input = document.getElementById('modalInput');
                 const error = document.getElementById('modalError');
                 const value = input.value.trim();
-
                 if (!value) {
                     error.innerText = '此项不能为空';
                     error.style.display = 'block';
                     input.classList.add('error');
-                    setTimeout(() => {
-                        input.classList.remove('error');
-                    }, 500);
+                    setTimeout(() => input.classList.remove('error'), 500);
                     return;
                 }
-
-                if (modalCallback) {
-                    modalCallback(value);
-                }
-            } else if (modalType === 'confirm') {
-                if (modalCallback) {
-                    modalCallback(true);
-                }
-            } else if (modalType === 'alert') {
-                if (modalCallback) {
-                    modalCallback();
-                }
+                if (modalCallback) modalCallback(value);
+            } else if (modalType === 'confirm' && modalCallback) {
+                modalCallback(true);
+            } else if (modalType === 'alert' && modalCallback) {
+                modalCallback();
             }
-
             closeModal();
         }
 
@@ -1650,9 +1589,7 @@
         window.onload = function() {
             initParticles();
             const savedUser = localStorage.getItem('current_user');
-            if (savedUser) {
-                login(savedUser);
-            }
+            if (savedUser) login(savedUser);
             startClock();
         };
 
@@ -1665,9 +1602,7 @@
                 errorEl.innerText = '请输入有效的昵称（2-12 位字符）';
                 errorEl.style.display = 'block';
                 inputEl.classList.add('error');
-                setTimeout(() => {
-                    inputEl.classList.remove('error');
-                }, 500);
+                setTimeout(() => inputEl.classList.remove('error'), 500);
                 return;
             }
 
@@ -1694,7 +1629,6 @@
             document.getElementById('loginOverlay').style.display = 'none';
             document.getElementById('appContainer').classList.add('active');
             
-            // 更新用户信息显示
             document.getElementById('headerUsername').innerText = currentUser;
             document.getElementById('headerAvatar').innerText = currentUser.charAt(0).toUpperCase();
             document.getElementById('desktopUsername').innerText = currentUser;
@@ -1722,36 +1656,53 @@
             updateStats();
         }
 
-        // ==================== 导航切换 ====================
+        // ==================== ⭐ 导航切换 - 完全修复版 ⭐ ====================
         function switchTab(tabId) {
-            // 处理"更多"按钮
-            if (tabId === 'more') {
-                showConfirm('更多功能', '请选择要查看的功能', (confirmed) => {
-                    if (confirmed) {
-                        // 可以展开更多选项
-                    }
-                }, {
-                    confirmText: '心情',
-                    cancelText: '记账'
+            console.log('切换到:', tabId);
+            
+            // 1. 隐藏所有 section
+            document.querySelectorAll('.section').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // 2. 显示目标 section
+            const targetSection = document.getElementById('section-' + tabId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                console.log('显示 section:', 'section-' + tabId);
+            }
+            
+            // 3. 更新移动端导航状态 - 移除所有 active
+            document.querySelectorAll('.bottom-nav .nav-item').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // 4. 更新桌面端导航状态 - 移除所有 active
+            document.querySelectorAll('.nav-item-desktop').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // 5. 添加 active 到当前选中的移动端导航
+            const mobileNavItem = document.querySelector(`.bottom-nav .nav-item[data-tab="${tabId}"]`);
+            if (mobileNavItem) {
+                mobileNavItem.classList.add('active');
+                // 滚动到可见区域
+                mobileNavItem.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'nearest', 
+                    inline: 'center' 
                 });
-                return;
+                console.log('移动端导航激活:', tabId);
+            }
+            
+            // 6. 添加 active 到当前选中的桌面端导航
+            const desktopNavItem = document.querySelector(`.nav-item-desktop[data-tab="${tabId}"]`);
+            if (desktopNavItem) {
+                desktopNavItem.classList.add('active');
+                console.log('桌面端导航激活:', tabId);
             }
 
-            document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-            
-            // 更新移动端导航
-            document.querySelectorAll('.bottom-nav .nav-item').forEach(el => el.classList.remove('active'));
-            // 更新桌面端导航
-            document.querySelectorAll('.nav-item-desktop').forEach(el => el.classList.remove('active'));
-
-            document.getElementById('section-' + tabId).classList.add('active');
-            
-            const mobileNavItem = document.querySelector(`.bottom-nav .nav-item[data-tab="${tabId}"]`);
-            const desktopNavItem = document.querySelector(`.nav-item-desktop[data-tab="${tabId}"]`);
-            
-            if (mobileNavItem) mobileNavItem.classList.add('active');
-            if (desktopNavItem) desktopNavItem.classList.add('active');
-
+            // 7. 更新页面标题
             const titles = {
                 'eat': '今天吃什么？',
                 'checkin': '考勤打卡',
@@ -1762,18 +1713,38 @@
                 'achievements': '成就系统',
                 'stats': '数据统计'
             };
-            document.getElementById('pageTitle').innerText = titles[tabId];
+            document.getElementById('pageTitle').innerText = titles[tabId] || '生活助手';
 
-            // 滚动到顶部
+            // 8. 滚动到页面顶部
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
-            // 刷新对应模块
-            if (tabId === 'checkin') renderCalendar();
-            if (tabId === 'todo') renderTodos();
-            if (tabId === 'mood') renderMoodHistory();
-            if (tabId === 'expense') renderExpenses();
-            if (tabId === 'achievements') renderAchievements();
-            if (tabId === 'stats') updateStats();
+            // 9. 刷新对应模块数据
+            setTimeout(() => {
+                if (tabId === 'checkin') {
+                    renderCalendar();
+                    console.log('渲染日历');
+                }
+                if (tabId === 'todo') {
+                    renderTodos();
+                    console.log('渲染待办');
+                }
+                if (tabId === 'mood') {
+                    renderMoodHistory();
+                    console.log('渲染心情');
+                }
+                if (tabId === 'expense') {
+                    renderExpenses();
+                    console.log('渲染记账');
+                }
+                if (tabId === 'achievements') {
+                    renderAchievements();
+                    console.log('渲染成就');
+                }
+                if (tabId === 'stats') {
+                    updateStats();
+                    console.log('更新统计');
+                }
+            }, 100);
         }
 
         // ==================== 模块 1: 今天吃什么 ====================
@@ -1845,7 +1816,6 @@
                 
                 showAlert('🎉 命运的选择', `今天吃：<br><strong style="font-size: 2rem; color: var(--primary);">${userData.foods[index]}</strong>`);
                 showNotification('转盘完成！', 'success');
-                
                 unlockAchievement('food_master', '美食家', '使用转盘 10 次');
             }, 4000);
         }
@@ -1891,7 +1861,6 @@
 
         function removeFood(index) {
             if (isSpinning) return;
-            
             showConfirm('删除确认', `确定要删除 "${userData.foods[index]}" 吗？`, (confirmed) => {
                 if (confirmed) {
                     userData.foods.splice(index, 1);
@@ -1929,8 +1898,6 @@
                 userData.checkins.push(today);
                 btn.innerHTML = '<i class="fas fa-times-circle"></i> 取消打卡';
                 btn.className = 'btn btn-danger';
-                btn.style.fontSize = '1.1rem';
-                btn.style.padding = '15px 40px';
                 status.innerText = '今日已打卡 ✓';
                 status.style.background = 'var(--success)';
                 status.style.color = 'white';
@@ -1949,8 +1916,6 @@
                         userData.checkins.splice(index, 1);
                         btn.innerHTML = '<i class="fas fa-check-circle"></i> 立即打卡';
                         btn.className = 'btn btn-success';
-                        btn.style.fontSize = '1.1rem';
-                        btn.style.padding = '15px 40px';
                         status.innerText = '今日未打卡';
                         status.style.background = '#eee';
                         status.style.color = '#666';
@@ -2037,12 +2002,8 @@
                 const prev = new Date(sorted[i-1]);
                 const curr = new Date(sorted[i]);
                 const diff = (prev - curr) / (1000 * 60 * 60 * 24);
-
-                if (diff === 1) {
-                    streak++;
-                } else {
-                    break;
-                }
+                if (diff === 1) streak++;
+                else break;
             }
 
             return streak;
@@ -2218,8 +2179,8 @@
                 div.className = 'mood-day';
                 if (isToday) div.style.border = '2px solid var(--primary)';
                 div.innerHTML = `
-                    <div style="font-size: 1.3rem;">${mood}</div>
-                    <div style="font-size: 0.65rem; margin-top: 3px;">${dayName}</div>
+                    <div style="font-size: 1.2rem;">${mood}</div>
+                    <div style="font-size: 0.6rem; margin-top: 2px;">${dayName}</div>
                 `;
                 container.appendChild(div);
             }
@@ -2398,7 +2359,6 @@
             }, 3000);
         }
 
-        // 窗口大小变化时重新初始化粒子
         window.addEventListener('resize', () => {
             const canvas = document.getElementById('particles-canvas');
             canvas.width = window.innerWidth;
